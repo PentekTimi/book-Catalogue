@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link own css stylesheet -->
+    <link rel="stylesheet" href="./styles.css">
+    <title>Book Catalogue</title>
+</head>
+<body onload="myLoad()">
+    <!-- H1 tag -->
+    <h1 class="center">Add a new book</h1>
+    <!-- Form to insert a new book -->
+    <form onsubmit="return false" novalidate class="center">
+        <!-- Title of the book input -->
+        <label for="title">Enter the title of the book: </label>
+        <input type="text" name="title" id="title" required><br>
+        <!-- Author of the book input -->
+        <label for="author">Enter the author: </label>
+        <input type="text" name="author" id="author" required><br>
+        <!-- Genre of the book input -->
+        <label for="genre">Enter the genre: </label>
+        <input type="text" name="genre" id="genre"><br>
+        <!-- Review of the book with dropdown options -->
+        <label for="review">Choose your review: </label>
+        <select id="review">
+            <option value="">--Please choose an option--</option>
+            <option value="1star">1 star</option>
+            <option value="2star">2 star</option>
+            <option value="3star">3 star</option>
+            <option value="4star">4 star</option>
+            <option value="5star">5 star</option>
+        </select><br>
+        <!-- Button to insert a new book -->
+        <button onclick="addBook()" class="btn">Create new book insertion</button>
+    </form>
+
+    <!-- Section for the added books -->
+    <div id="list" class="center">
+        <!-- book instances will go here -->
+    </div>
+
+<!-- Link own JS script -->
+<script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
